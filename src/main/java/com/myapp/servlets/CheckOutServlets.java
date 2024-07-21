@@ -54,14 +54,16 @@ public class CheckOutServlets extends HttpServlet {
 					OrderDao orderDao = new OrderDao(DBCon.getConnection());
 					boolean result = orderDao.insertOrder(order);
 					
-					if(result) break;
+					if(!result) break;
 				}
 				
 				cart_list.clear();
 				response.sendRedirect("orders.jsp");
 				
 			}else {
-				if(auth == null) response.sendRedirect("login.jsp");
+				if(auth == null) {
+					response.sendRedirect("login.jsp");
+				}
 				response.sendRedirect("cart.jsp");
 			}
 			

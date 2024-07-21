@@ -36,9 +36,8 @@ public class RemoveFromCardServlets extends HttpServlet {
 							break;
 						}
 					}
-					response.sendRedirect("cart.jsp");
 				}
-				
+				response.sendRedirect("cart.jsp");
 			} else {
 				response.sendRedirect("cart.jsp");
 			}

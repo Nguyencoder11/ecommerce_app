@@ -21,7 +21,7 @@
     	ProductDao pdao = new ProductDao(DBCon.getConnection());
     	cartProducts = pdao.getCartProducts(cart_list);
     	total = pdao.getTotalCartPrice(cart_list);
-    	request.setAttribute("cart-list", cart_list);
+    	request.setAttribute("cart_list", cart_list);
     	request.setAttribute("total", total);
     	
     }
