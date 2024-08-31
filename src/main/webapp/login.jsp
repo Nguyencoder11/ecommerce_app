@@ -28,14 +28,14 @@
 			<form action="user-login" method="post">
 				<div class="form-group">
 					<label>Email Address</label>
-					<input type="email" class="form-control" name="login-email" placeholder="Enter your email" required>
+					<input type="email" id="login-email" class="form-control" name="login-email" placeholder="Enter your email" required>
 				</div>
 				<div class="form-group">
 					<label>Password</label>
-					<input type="password" class="form-control" name="login-password" placeholder="********" required>
+					<input type="password" id="login-password" class="form-control" name="login-password" placeholder="********" required>
 				</div>
 				<div class="text-center">
-					<button type="submit" class="btn btn-primary">Login</button>
+					<button type="submit" id="login" class="btn btn-primary">Login</button>
 				</div>
 			</form>
 		</div>

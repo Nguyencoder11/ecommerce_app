@@ -24,11 +24,11 @@
 	    	  <li class="nav-item">
 		        <a class="nav-link" href="orders.jsp">Orders</a>
 		      </li>
-		      <li class="nav-item">
+		      <li class="nav-item" id="logout">
 		        <a class="nav-link" href="log-out">Logout</a>
 		      </li>
 	      <% }else{ %>
-	    	  <li class="nav-item">
+	    	  <li class="nav-item" id="log">
 		        <a class="nav-link" href="login.jsp">Login</a>
 		      </li>
 	      <%}
