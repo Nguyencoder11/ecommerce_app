@@ -1,5 +1,11 @@
 <%@page import="java.util.*" %>
 <%@page import="com.myapp.entity.*"%>
+
+<%
+User auth = (User) request.getAttribute("auth");
+ArrayList<Cart> cart_list = (ArrayList<Cart>) request.getAttribute("cart_list");
+%>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
   	<a class="navbar-brand" href="index.jsp">Cart App</a>

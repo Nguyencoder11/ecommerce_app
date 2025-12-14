@@ -2,10 +2,10 @@
 <%@page import="com.myapp.dao.ProductDao"%>
 <%@page import="com.myapp.connection.DBCon"%>
 <%@page import="com.myapp.entity.*"%>
+<%@include file="includes/init.jsp" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%
-    User auth = (User) request.getSession().getAttribute("auth");
     if(auth != null){
     	request.setAttribute("auth", auth);
     }
@@ -13,7 +13,6 @@
     ProductDao pd = new ProductDao(DBCon.getConnection());
     List<Product> products = pd.getAllProducts();
     
-    ArrayList<Cart> cart_list = (ArrayList<Cart>) session.getAttribute("cart-list");
     if(cart_list != null){
     	request.setAttribute("cart_list", cart_list);
     }

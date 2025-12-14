@@ -3,12 +3,12 @@
 <%@page import="com.myapp.entity.*"%>
 <%@page import="java.util.*" %>
 <%@page import="java.text.DecimalFormat"%>
+<%@include file="includes/init.jsp" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%
     DecimalFormat dcf = new DecimalFormat("#.##");
     request.setAttribute("dcf", dcf);
-    User auth = (User) request.getSession().getAttribute("auth");
     List<Order> orders = null;
     
     if(auth != null){
@@ -18,7 +18,6 @@
     	response.sendRedirect("login.jsp");
     }
     
-    ArrayList<Cart> cart_list = (ArrayList<Cart>) session.getAttribute("cart-list");
     if(cart_list != null){
     	request.setAttribute("cart_list", cart_list);
     }
